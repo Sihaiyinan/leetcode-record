@@ -22,7 +22,7 @@ public:
 
 int main()
 {
-    string s = "abcabcbb";
+    string s = "abcaabcbb";
     cout << Solution().lengthOfLongestSubstring(s) << endl;
     return 0;
 }
