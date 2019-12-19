@@ -65,7 +65,6 @@ public:
     }
 };
 
-
 ListNode* vector2ListNode(vector<int> list) {
     ListNode* dummyRoot = new ListNode(0);
     ListNode* ptr = dummyRoot;
