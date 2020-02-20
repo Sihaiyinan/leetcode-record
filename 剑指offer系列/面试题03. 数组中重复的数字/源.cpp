@@ -1,6 +1,5 @@
 // 面试题03. 数组中重复的数字
 
-
 #include <iostream>
 #include <vector>
 #include <string>
