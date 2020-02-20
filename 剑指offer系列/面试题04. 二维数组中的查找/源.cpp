@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 class Solution {
 public:
 	bool findNumberIn2DArray1(vector<vector<int>>& matrix, int target) {
