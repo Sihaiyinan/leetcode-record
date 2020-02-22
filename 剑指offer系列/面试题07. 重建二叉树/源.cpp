@@ -1,6 +1,5 @@
 // 面试题07. 重建二叉树
 
-
 #include <iostream>
 #include <vector>
 #include <string>
