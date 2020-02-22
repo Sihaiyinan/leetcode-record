@@ -1,6 +1,5 @@
 // 面试题06. 从尾到头打印链表
 
-
 #include <iostream>
 #include <vector>
 #include <string>
