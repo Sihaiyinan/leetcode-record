@@ -35,7 +35,6 @@ public:
 		return isPath;
 	}
 
-
 	bool exist(vector<vector<char>>& board, string word) {
 		if (word.empty()) return true;
 		int rows = board.size();
