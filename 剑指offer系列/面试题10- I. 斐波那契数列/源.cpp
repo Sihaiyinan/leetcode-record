@@ -24,7 +24,7 @@ public:
 
 int main() 
 {
-	int f = 5;
+	int f = 6;
 	cout << Solution().fib(f) << endl;
 
 	std::cout << endl;
