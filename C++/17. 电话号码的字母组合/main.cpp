@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution {
 public:
-    // 娣卞害浼樺厛閬嶅巻
+    // 深度优先遍历
     vector<string> letterCombinations(string digits) {
         vector<string> map = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
@@ -33,7 +33,7 @@ public:
         return 0;
     }
 
-    // 骞垮害浼樺厛閬嶅巻
+    // 广度优先遍历
     vector<string> letterCombinations2(string digits) {
         vector<string> map = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
