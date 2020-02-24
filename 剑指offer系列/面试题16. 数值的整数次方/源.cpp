@@ -1,5 +1,4 @@
-// 面试题13. 机器人的运动范围
-
+// 面试题16. 数值的整数次方
 #include <iostream>
 #include <vector>
 #include <string>
