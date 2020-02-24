@@ -1,4 +1,4 @@
-// ÃæÊÔÌâ04. ¶şÎ¬Êı×éÖĞµÄ²éÕÒ
+// é¢è¯•é¢˜04. äºŒç»´æ•°ç»„ä¸­çš„æŸ¥æ‰¾
 
 #include <iostream>
 #include <vector>
@@ -18,7 +18,7 @@ public:
 			{
 				if (target == matrix[j][i])
 					return true;
-				if (target < matrix[j][i])   // ÔÚÕâÀïbreakÖ®ºój»áÖØĞÂµÈÓÚ0£¬ĞèÒªÓÅ»¯
+				if (target < matrix[j][i])   // åœ¨è¿™é‡Œbreakä¹‹åjä¼šé‡æ–°ç­‰äº0ï¼Œéœ€è¦ä¼˜åŒ–
 					break;
 				if (target > matrix[j][i])
 					continue;

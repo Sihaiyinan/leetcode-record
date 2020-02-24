@@ -10,18 +10,18 @@ public:
 			return string("0");
 
 		int s1 = num1.size(), s2 = num2.size();
-		vector<int> res(s1 * s2, 0);       // ´´½¨Ò»¸öÊı×é±£´æ¼ÆËã½á¹û
+		vector<int> res(s1 * s2, 0);       // åˆ›å»ºä¸€ä¸ªæ•°ç»„ä¿å­˜è®¡ç®—ç»“æœ
 
 		for (int i = 0; i < s2; ++i)
 			for (int j = 0; j < s1; ++j)
 				res[i + j] += (num1[s1 - j - 1] - '0') * (num2[s2 - i - 1] - '0');
 
-		// ´¦Àí¶àÓàµÄ0
+		// å¤„ç†å¤šä½™çš„0
 		while (res[res.size() - 1] == 0)
 			res.pop_back();
 
-		// ½øÎ»´¦Àí
-		res.push_back(0);  // ¶àÒ»¸ö0·½±ã×îºóÒ»Î»´óÓÚ9Ê±½øÎ»
+		// è¿›ä½å¤„ç†
+		res.push_back(0);  // å¤šä¸€ä¸ª0æ–¹ä¾¿æœ€åä¸€ä½å¤§äº9æ—¶è¿›ä½
 		for (int i = 0; i < res.size() - 1; ++i)
 		{
 			if (res[i] > 9)
@@ -30,7 +30,7 @@ public:
 				res[i] %= 10;
 			}
 		}
-		if (res[res.size() - 1] == 0) res.pop_back();    // Èç¹û×îºóÒ»Î»ÊÇ0¾ÍÈ¥µô
+		if (res[res.size() - 1] == 0) res.pop_back();    // å¦‚æœæœ€åä¸€ä½æ˜¯0å°±å»æ‰
 
 		string re;
 		for (int i = 0; i < res.size(); ++i)

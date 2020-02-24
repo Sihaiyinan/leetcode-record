@@ -1,4 +1,4 @@
-// ÃæÊÔÌâ22. Á´±íÖĞµ¹ÊıµÚk¸ö½Úµã
+// é¢è¯•é¢˜22. é“¾è¡¨ä¸­å€’æ•°ç¬¬kä¸ªèŠ‚ç‚¹
 
 #include <iostream>
 #include <vector>
@@ -9,7 +9,7 @@ using namespace std;
 
 class Solution {
 public:
-	// ³¬Ê±
+	// è¶…æ—¶
 	vector<int> exchange1(vector<int>& nums) {
 		if (nums.empty()) return nums;
 

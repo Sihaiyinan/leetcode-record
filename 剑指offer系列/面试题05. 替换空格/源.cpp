@@ -1,4 +1,4 @@
-// ÃæÊÔÌâ05. Ìæ»»¿Õ¸ñ
+// é¢è¯•é¢˜05. æ›¿æ¢ç©ºæ ¼
 
 
 #include <iostream>
@@ -13,17 +13,17 @@ public:
 		if (s.empty()) return "";
 		int len = s.size();
 		int kg = 0;
-		for (auto &i : s)   // Ê×ÏÈÍ³¼Æ×Ö·û´®ÖĞµÄ¿Õ¸ñÊı
+		for (auto &i : s)   // é¦–å…ˆç»Ÿè®¡å­—ç¬¦ä¸²ä¸­çš„ç©ºæ ¼æ•°
 		{
 			if (i == ' ')
 				++kg;
 		}
 		int new_len = len + kg * 2;
-		for (int i = len; i < new_len; ++i)    // À©´ó×Ö·û´®µÄ³¤¶È
+		for (int i = len; i < new_len; ++i)    // æ‰©å¤§å­—ç¬¦ä¸²çš„é•¿åº¦
 			s += ' ';
 
 		int index = new_len - 1;
-		for (int i = len - 1; i >= 0; --i)   // ´ÓºóÍùÇ°ÒÀ´ÎÌæ»»¿Õ¸ñ
+		for (int i = len - 1; i >= 0; --i)   // ä»åå¾€å‰ä¾æ¬¡æ›¿æ¢ç©ºæ ¼
 		{
 			if (s[i] != ' ')
 				s[index--] = s[i];

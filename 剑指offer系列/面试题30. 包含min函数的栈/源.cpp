@@ -1,4 +1,4 @@
-// ÃæÊÔÌâ30. °üº¬minº¯ÊıµÄÕ»
+// é¢è¯•é¢˜30. åŒ…å«minå‡½æ•°çš„æ ˆ
 #include <iostream>
 #include <vector>
 #include <string>

@@ -1,4 +1,4 @@
-// ÃæÊÔÌâ17. ´òÓ¡´Ó1µ½×î´óµÄnÎ»Êý
+// é¢è¯•é¢˜17. æ‰“å°ä»Ž1åˆ°æœ€å¤§çš„nä½æ•°
 
 #include <iostream>
 #include <vector>

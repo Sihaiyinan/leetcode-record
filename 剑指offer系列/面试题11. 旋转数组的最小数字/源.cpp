@@ -1,4 +1,4 @@
-// ÃæÊÔÌâ11. Ğı×ªÊı×éµÄ×îĞ¡Êı×Ö
+// é¢è¯•é¢˜11. æ—‹è½¬æ•°ç»„çš„æœ€å°æ•°å­—
 
 #include <iostream>
 #include <vector>
@@ -10,12 +10,12 @@ using namespace std;
 
 class Solution {
 public:
-	// ¶ş·Ö·¨
+	// äºŒåˆ†æ³•
 	int minArray(vector<int>& numbers) {
 		int len = numbers.size();
 		int begin = 0, end = len - 1, mid = 0;
 
-		// Á½¸öwhile·ÀÖ¹{2,2,2,0,2}ÕâÑùµÄÌØÀı
+		// ä¸¤ä¸ªwhileé˜²æ­¢{2,2,2,0,2}è¿™æ ·çš„ç‰¹ä¾‹
 		while (begin < end)
 		{
 			if (numbers[begin] == numbers[begin + 1])
@@ -29,7 +29,7 @@ public:
 			else break;
 		}
 
-		if (begin == end) return numbers[0];    // ·ÀÖ¹ {2,2,2,2,2} ÕâÑùµÄÀı×Ó
+		if (begin == end) return numbers[0];    // é˜²æ­¢ {2,2,2,2,2} è¿™æ ·çš„ä¾‹å­
 
 		while (numbers[begin] >= numbers[end])
 		{

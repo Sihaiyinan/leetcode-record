@@ -1,4 +1,4 @@
-// ÃæÊÔÌâ13. »úÆ÷ÈËµÄÔË¶¯·¶Î§
+// é¢è¯•é¢˜13. æœºå™¨äººçš„è¿åŠ¨èŒƒå›´
 
 #include <iostream>
 #include <vector>
@@ -12,19 +12,19 @@ public:
 	int movingCount(int m, int n, int k) {
 		if (k < 0 || m <= 0 || n <= 0)
 			return 0;
-		vector<int> visited(m * n);    // ¼ÇÂ¼¸ÃÎ»ÖÃÊÇ·ñÒÑ¾­¾­¹ı
+		vector<int> visited(m * n);    // è®°å½•è¯¥ä½ç½®æ˜¯å¦å·²ç»ç»è¿‡
 
-		int count = movingCountCore(k, 0, 0, m, n, visited);       // ´Ó£¨0,0£©¿ªÊ¼½øĞĞ»ØËİ
+		int count = movingCountCore(k, 0, 0, m, n, visited);       // ä»ï¼ˆ0,0ï¼‰å¼€å§‹è¿›è¡Œå›æº¯
 		return count;
 	}
 
 	int movingCountCore(int threshold, int row, int col, int rows, int cols, vector<int> &visited)
 	{
 		int count = 0;
-		if (check(threshold, row, col, rows, cols, visited))  // ÓÃcheckº¯Êı¼ì²éÊÇ·ñÂú×ãÌâÄ¿ÒªÇóÌõ¼ş
+		if (check(threshold, row, col, rows, cols, visited))  // ç”¨checkå‡½æ•°æ£€æŸ¥æ˜¯å¦æ»¡è¶³é¢˜ç›®è¦æ±‚æ¡ä»¶
 		{
 			visited[row * cols + col] = 1;
-			count = 1 + movingCountCore(threshold, row - 1, col, rows, cols, visited)      // ¼ÆËã¸ÃÎ»ÖÃµÄËÄ¸ö·½ÏòÂú×ãÌõ¼şµÄ¸öÊı
+			count = 1 + movingCountCore(threshold, row - 1, col, rows, cols, visited)      // è®¡ç®—è¯¥ä½ç½®çš„å››ä¸ªæ–¹å‘æ»¡è¶³æ¡ä»¶çš„ä¸ªæ•°
 				+ movingCountCore(threshold, row + 1, col, rows, cols, visited)
 				+ movingCountCore(threshold, row, col - 1, rows, cols, visited)
 				+ movingCountCore(threshold, row, col + 1, rows, cols, visited);
@@ -57,31 +57,31 @@ public:
 		if (m <= 0 || n <= 0 || k < 0)
 			return 0;
 		
-		vector<vector<int>> move = { {0, 1}, {0, -1}, {1, 0}, {-1, 0} };    // µ±Ç°Î»ÖÃµÄËÄ¸ö·½Ïò
-		int count = 1;            // ³õÊ¼¼ÆÊıÎª1
-		queue<vector<int>> q;     // ´´½¨Ò»¸ö¶ÓÁĞÓÃÀ´±£´æ×ß¹ıµÄÎ»ÖÃ
-		q.push({ 0, 0 });         // ³õÊ¼Î»ÖÃÎª£¨0,0£©
+		vector<vector<int>> move = { {0, 1}, {0, -1}, {1, 0}, {-1, 0} };    // å½“å‰ä½ç½®çš„å››ä¸ªæ–¹å‘
+		int count = 1;            // åˆå§‹è®¡æ•°ä¸º1
+		queue<vector<int>> q;     // åˆ›å»ºä¸€ä¸ªé˜Ÿåˆ—ç”¨æ¥ä¿å­˜èµ°è¿‡çš„ä½ç½®
+		q.push({ 0, 0 });         // åˆå§‹ä½ç½®ä¸ºï¼ˆ0,0ï¼‰
 
 		vector<int> visited(m * n);   
 		visited[0] = 1;
 
-		while (!q.empty())        // µ±¶ÓÁĞ²»Îª¿ÕÊ±ËµÃ÷´æÔÚÂú×ãÌõ¼şµÄÎ»ÖÃ£¬ĞèÒª¶Ô¸ÃÎ»ÖÃÖÜÎ§µÄËÄ¸öÎ»ÖÃ½øĞĞÅĞ¶Ï
+		while (!q.empty())        // å½“é˜Ÿåˆ—ä¸ä¸ºç©ºæ—¶è¯´æ˜å­˜åœ¨æ»¡è¶³æ¡ä»¶çš„ä½ç½®ï¼Œéœ€è¦å¯¹è¯¥ä½ç½®å‘¨å›´çš„å››ä¸ªä½ç½®è¿›è¡Œåˆ¤æ–­
 		{
 			int x = q.front()[0];
 			int y = q.front()[1];
-			q.pop();     // µ±µ±Ç°Î»ÖÃµ¯³ö
+			q.pop();     // å½“å½“å‰ä½ç½®å¼¹å‡º
 			
-			for (auto &i : move)    // ÒÀ´Î¶ÔËÄ¸ö·½Ïò½øĞĞÅĞ¶Ï
+			for (auto &i : move)    // ä¾æ¬¡å¯¹å››ä¸ªæ–¹å‘è¿›è¡Œåˆ¤æ–­
 			{
 				int nx = x + i[0]; 
 				int ny = y + i[1];
 				
-				// ÅĞ¶ÏÊÇ·ñÔ½½ç¡¢Âú×ãÌâÄ¿ÒªÇó¡¢¸ÃÎ»ÖÃÊÇ·ñ·ÃÎÊ¹ı
+				// åˆ¤æ–­æ˜¯å¦è¶Šç•Œã€æ»¡è¶³é¢˜ç›®è¦æ±‚ã€è¯¥ä½ç½®æ˜¯å¦è®¿é—®è¿‡
 				if (nx >= 0 && nx < n && ny >= 0 && ny < m && (getDigitSum(nx) + getDigitSum(ny) <= k && !visited[ny * n + nx]))
 				{
 					++count;
 					visited[ny * n + nx] = 1;
-					q.push({ nx, ny });       // ½«Âú×ãÒªÇóµÄÎ»ÖÃ¼ÓÈëµ½¶ÓÁĞÖĞ
+					q.push({ nx, ny });       // å°†æ»¡è¶³è¦æ±‚çš„ä½ç½®åŠ å…¥åˆ°é˜Ÿåˆ—ä¸­
 				}
 			}
 		}

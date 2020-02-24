@@ -1,4 +1,4 @@
-// ÃæÊÔÌâ31. Õ»µÄÑ¹Èë¡¢µ¯³öĞòÁĞ
+// é¢è¯•é¢˜31. æ ˆçš„å‹å…¥ã€å¼¹å‡ºåºåˆ—
 #include <iostream>
 #include <vector>
 #include <string>
@@ -13,8 +13,8 @@ public:
 		if (pushed.empty() || popped.empty())
 			return false;
 
-		vector<int> s;    // ¸¨ÖúÕ»
-		int j = 0;        // poppedÏÂ±ê
+		vector<int> s;    // è¾…åŠ©æ ˆ
+		int j = 0;        // poppedä¸‹æ ‡
 		for (auto i : pushed)
 		{
 			s.push_back(i);

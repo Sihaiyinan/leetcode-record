@@ -41,7 +41,7 @@ string list2string(ListNode *node)
 class Solution {
 public:
 	ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-		// µÝ¹é
+		// é€’å½’
 		if (l1 == nullptr) return l2;
 		if (l2 == nullptr) return l1;
 
@@ -58,7 +58,7 @@ public:
 	}
 
 	ListNode* mergeTwoLists2(ListNode* l1, ListNode* l2) {
-		// µü´ú
+		// è¿­ä»£
 		ListNode *head = new ListNode(0);
 		ListNode *cur = head;
 

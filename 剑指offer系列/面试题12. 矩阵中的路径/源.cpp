@@ -1,4 +1,4 @@
-// ÃæÊÔÌâ12. ¾ØÕóÖĞµÄÂ·¾¶
+// é¢è¯•é¢˜12. çŸ©é˜µä¸­çš„è·¯å¾„
 
 #include <iostream>
 #include <vector>
@@ -13,20 +13,20 @@ public:
 		vector<vector<char>>& board, string &str, int &str_len,
 		int i, int j, int &rows, int &cols, vector<int> &visited)
 	{
-		if (str_len == str.size())    // Èç¹ûstrÖĞµÄÔªËØ¶¼±È½ÏÍêÁË£¬ËµÃ÷´æÔÚÒ»ÌõÂ·¾¶£¬·µ»Øtrue
+		if (str_len == str.size())    // å¦‚æœsträ¸­çš„å…ƒç´ éƒ½æ¯”è¾ƒå®Œäº†ï¼Œè¯´æ˜å­˜åœ¨ä¸€æ¡è·¯å¾„ï¼Œè¿”å›true
 			return true;
 		
 		bool isPath = false;
-		if (i >= 0 && i < rows && j >= 0 && j < cols &&              // ÅĞ¶ÏÊÇ·ñ³¬½ç
-			board[i][j] == str[str_len] && !visited[i*cols + j])     // ÅĞ¶Ï¸ÃÎ»ÖÃÊÇ·ñÓëstrÖĞµÄ×Ö·ûÏàµÈ£¬ÅĞ¶Ï¸ÃÎ»ÖÃÊÇ·ñ¾­¹ı
+		if (i >= 0 && i < rows && j >= 0 && j < cols &&              // åˆ¤æ–­æ˜¯å¦è¶…ç•Œ
+			board[i][j] == str[str_len] && !visited[i*cols + j])     // åˆ¤æ–­è¯¥ä½ç½®æ˜¯å¦ä¸strä¸­çš„å­—ç¬¦ç›¸ç­‰ï¼Œåˆ¤æ–­è¯¥ä½ç½®æ˜¯å¦ç»è¿‡
 		{
 			++str_len;
 			visited[i*cols + j] = 1;
-			isPath = hasPath(board, str, str_len, i, j - 1, rows, cols, visited)    // ¶ÔËÄ¸ö·½Ïò½øĞĞÅĞ¶Ï
+			isPath = hasPath(board, str, str_len, i, j - 1, rows, cols, visited)    // å¯¹å››ä¸ªæ–¹å‘è¿›è¡Œåˆ¤æ–­
 				|| hasPath(board, str, str_len, i, j + 1, rows, cols, visited)
 				|| hasPath(board, str, str_len, i - 1, j, rows, cols, visited)
 				|| hasPath(board, str, str_len, i + 1, j, rows, cols, visited);
-			if (!isPath)     // Èç¹ûËÄ¸ö·½Ïò¶¼²»´æÔÚÂ·¾¶£¬ËµÃ÷¸ÃÎ»ÖÃ²»´æÔÚÂ·¾¶£¬ĞèÒªÍË»Ø
+			if (!isPath)     // å¦‚æœå››ä¸ªæ–¹å‘éƒ½ä¸å­˜åœ¨è·¯å¾„ï¼Œè¯´æ˜è¯¥ä½ç½®ä¸å­˜åœ¨è·¯å¾„ï¼Œéœ€è¦é€€å›
 			{
 				--str_len;
 				visited[i*cols + j] = 0;
@@ -39,9 +39,9 @@ public:
 		if (word.empty()) return true;
 		int rows = board.size();
 		int cols = board[0].size();
-		vector<int> flag(rows * cols);      // ÅĞ¶Ï¸ÃÎ»ÖÃÊÇ·ñÒÑ¾­¾­¹ı
+		vector<int> flag(rows * cols);      // åˆ¤æ–­è¯¥ä½ç½®æ˜¯å¦å·²ç»ç»è¿‡
 
-		int str_len = 0;       // µ±Ç°Î»ÖÃÔÚstrÖĞµÄ³¤¶È
+		int str_len = 0;       // å½“å‰ä½ç½®åœ¨strä¸­çš„é•¿åº¦
 		for (int i = 0; i < rows; ++i)
 		{
 			for (int j = 0; j < cols; ++j)

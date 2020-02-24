@@ -1,4 +1,4 @@
-// ÃæÊÔÌâ27. ¶þ²æÊ÷µÄ¾µÏñ
+// é¢è¯•é¢˜27. äºŒå‰æ ‘çš„é•œåƒ
 #include <iostream>
 #include <vector>
 #include <string>
@@ -16,9 +16,9 @@ struct TreeNode
 class Solution {
 public:
 	/*
-	Ë¼Â·£º
-	µÚÒ»²½£¬Ê×ÏÈÔÚAÖÐ²éÕÒÓë¸ù½áµãÏàÍ¬µÄ½áµã
-	µÚ¶þ²½£¬Èç¹û½áµãÏàÍ¬£¬ÅÐ¶ÏÆäÊÇ·ñÎª×ÓÊ÷
+	æ€è·¯ï¼š
+	ç¬¬ä¸€æ­¥ï¼Œé¦–å…ˆåœ¨Aä¸­æŸ¥æ‰¾ä¸Žæ ¹ç»“ç‚¹ç›¸åŒçš„ç»“ç‚¹
+	ç¬¬äºŒæ­¥ï¼Œå¦‚æžœç»“ç‚¹ç›¸åŒï¼Œåˆ¤æ–­å…¶æ˜¯å¦ä¸ºå­æ ‘
 	**/
 	bool isSubStructure(TreeNode* A, TreeNode* B) {
 		if (A == nullptr || B == nullptr)
