@@ -14,15 +14,16 @@ public:
 	}
 
 	void push(int x) {
-		if (x < min_value)
-			min_value = x;
+		if (m_stack.empty() || x < m_stack[m_stack.size() - 1])
+			m_stack.push_back(x);
+		else
+			m_stack.push_back(m_stack[m_stack.size() - 1]);
 		stack.push_back(x);
 	}
 
 	void pop() {
-		if (stack[stack.size() - 1] == min_value)
-			min_value = *min_element(stack.data(), stack.data() + stack.size() - 1);
 		stack.pop_back();
+		m_stack.pop_back();
 	}
 
 	int top() {
@@ -30,12 +31,12 @@ public:
 	}
 
 	int min() {
-		return min_value;
+		return m_stack[m_stack.size() - 1];
 	}
 	
 private:
-	int min_value = 0x7FFFFFFF;
 	vector<int> stack;
+	vector<int> m_stack;
 };
 
 int main() 
