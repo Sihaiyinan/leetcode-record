@@ -63,10 +63,6 @@ public:
     int bfs(TreeNode *root, int cur_sum, int &sum, vector<vector<int>> &res, vector<int> &re)
     {
         if (root == nullptr) return 0;
-        if (root->val + cur_sum > sum)
-        {
-            return 0;
-        }
         if (root->val + cur_sum == sum && root->left == nullptr && root->right == nullptr)
         {
             re.push_back(root->val);
@@ -74,7 +70,7 @@ public:
             re.pop_back();
             return 0;
         }
-        if (root->val + cur_sum < sum)
+        else
         {
             re.push_back(root->val);
             bfs(root->left, cur_sum + root->val, sum, res, re);
@@ -86,8 +82,8 @@ public:
 };
 
 int main() {
-    vector<string> list = {"1", "2"};//{ "5","4","8","11","null","13","4","7","2","null","null","5","1" };
-    vector<vector<int>> re = Solution().pathSum(vector2tree(list), 1);
+    vector<string> list = { "5","4","8","11","null","13","4","7","2","null","null","5","1" };
+    vector<vector<int>> re = Solution().pathSum(vector2tree(list), 22);
 
     for (auto &i : re) {
         for (auto &j : i)
