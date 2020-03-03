@@ -44,7 +44,7 @@ public:
 
 
 int main() {
-    string s = "aab";
+    string s = "abc";
     vector<string> re = Solution().permutation(s);
 
 
