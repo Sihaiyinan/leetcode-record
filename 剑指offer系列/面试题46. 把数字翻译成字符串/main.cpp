@@ -10,7 +10,7 @@ using namespace std;
 class Solution {
 public:
 	// 回溯
-	int translateNum(int num) {
+	int translateNum1(int num) {
 		if (num < 10)
 			return 1;
 		int tmp = num % 100;
@@ -19,6 +19,24 @@ public:
 		else
 			return translateNum(num / 10) + translateNum(num / 100);
 
+	}
+
+	//dp
+	int translateNum(int num) {
+		if (num < 0)
+			return -1;
+		string s = to_string(num);
+		int dp[11];
+		dp[0] = 1;
+		dp[1] = 1;
+		for (int i = 1; i < s.size(); ++i)
+		{
+			if (s[i - 1] == '0' || s.substr(i - 1, 2) > "25")
+				dp[i + 1] = dp[i];
+			else
+				dp[i + 1] = dp[i] + dp[i - 1];
+		}
+		return dp[s.size()];
 	}
 };
 
