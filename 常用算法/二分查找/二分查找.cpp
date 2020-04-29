@@ -87,7 +87,7 @@ int search3(vector<int> nums, int left, int right, int target)
 
 lower_bound(beg, end, val)
 lower_bound(beg, end, val, comp)
-返回一个迭代器，表示第一个小于等于val的元素，如果不存在这样的元素，则返回end。
+返回一个迭代器，表示第一个大于等于val的元素，如果不存在这样的元素，则返回end。
 
 upper_bound(beg, end, val)
 upper_bound(beg, end, val, comp)
